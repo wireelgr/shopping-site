@@ -1,0 +1,661 @@
+@charset "UTF-8";
+/*共通*/
+html {
+  font-size: 62.5%;
+  /* ベースとなるフォントサイズの定義 */ }
+
+body {
+  background-color: #f9f8f6;
+  /* 背景色 */ }
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block; }
+
+/*ヘッダー*/
+header .container {
+  height: 90px; }
+  header .container #logo {
+    text-align: center;
+    margin-top: 1px;
+    margin-bottom: 0; }
+  header .container #pc_logo {
+    display: none; }
+  header .container .sp_menu {
+    text-align: center;
+    margin-bottom: 0; }
+    header .container .sp_menu li {
+      display: inline-block;
+      list-style: none; }
+    header .container .sp_menu .sp_menu_center {
+      margin-right: 12.5px;
+      margin-left: 12.5px; }
+    header .container .sp_menu .sp_menu_li {
+      display: none;
+      background-color: #ff6d77; }
+      header .container .sp_menu .sp_menu_li li {
+        height: 40px;
+        display: block;
+        border-bottom: 0.5px solid #ffffff;
+        text-align: left;
+        margin: 0;
+        padding-top: 15px; }
+      header .container .sp_menu .sp_menu_li a {
+        text-decoration: none;
+        color: #ffffff; }
+
+@media (max-width: 550px) {
+  .pc_menu {
+    display: none; } }
+/*ヘッダー PC*/
+@media (min-width: 550px) {
+  header .container {
+    height: 120px; }
+    header .container #logo {
+      display: none; }
+    header .container #pc_logo {
+      display: block;
+      height: 40px;
+      margin-top: 40px;
+      margin-bottom: 0; }
+    header .container .sp_menu {
+      display: none; }
+    header .container .pc_menu {
+      margin-top: 70px;
+      float: right; }
+      header .container .pc_menu li {
+        float: left;
+        list-style: none;
+        margin-left: 20px; } }
+/*メインコンテンツ*/
+main #maincontents .owl-theme img {
+  height: 120px; }
+main #maincontents .owl-theme .owl-dots {
+  height: 10.5px;
+  margin: 0;
+  text-align: left; }
+  main #maincontents .owl-theme .owl-dots .owl-dot {
+    height: 20px;
+    margin: 0; }
+    main #maincontents .owl-theme .owl-dots .owl-dot span {
+      width: 25px;
+      height: 2px;
+      margin: 5px 7px;
+      background: #D6D6D6;
+      display: block;
+      -webkit-backface-visibility: visible;
+      transition: opacity .2s ease;
+      border-radius: 0px; }
+  main #maincontents .owl-theme .owl-dots .active span {
+    background: #9d1a2d; }
+main #maincontents .new_items .items_title,
+main #maincontents .popular_items .items_title,
+main #maincontents .list_items .items_title,
+main #maincontents .recent_items .items_title {
+  height: 49.5px;
+  text-align: center; }
+  main #maincontents .new_items .items_title img,
+  main #maincontents .popular_items .items_title img,
+  main #maincontents .list_items .items_title img,
+  main #maincontents .recent_items .items_title img {
+    margin-top: 20px;
+    margin-bottom: 17.5px; }
+  main #maincontents .new_items .items_title .pc_title_items,
+  main #maincontents .popular_items .items_title .pc_title_items,
+  main #maincontents .list_items .items_title .pc_title_items,
+  main #maincontents .recent_items .items_title .pc_title_items {
+    display: none; }
+main #maincontents .new_items .items,
+main #maincontents .popular_items .items,
+main #maincontents .list_items .items,
+main #maincontents .recent_items .items {
+  display: flex;
+  flex-wrap: wrap; }
+  main #maincontents .new_items .items .items_contents,
+  main #maincontents .popular_items .items .items_contents,
+  main #maincontents .list_items .items .items_contents,
+  main #maincontents .recent_items .items .items_contents {
+    width: calc(100% / 2 - 2px);
+    padding: 9px;
+    box-sizing: border-box;
+    background-color: white;
+    margin: 1px; }
+    main #maincontents .new_items .items .items_contents p,
+    main #maincontents .popular_items .items .items_contents p,
+    main #maincontents .list_items .items .items_contents p,
+    main #maincontents .recent_items .items .items_contents p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem; }
+    main #maincontents .new_items .items .items_contents .items_name,
+    main #maincontents .popular_items .items .items_contents .items_name,
+    main #maincontents .list_items .items .items_contents .items_name,
+    main #maincontents .recent_items .items .items_contents .items_name {
+      margin-bottom: 15px; }
+    main #maincontents .new_items .items .items_contents .items_price,
+    main #maincontents .popular_items .items .items_contents .items_price,
+    main #maincontents .list_items .items .items_contents .items_price,
+    main #maincontents .recent_items .items .items_contents .items_price {
+      margin-bottom: 10px; }
+main #maincontents .shoppingguide .title_shopping {
+  height: 49.5px;
+  text-align: center; }
+  main #maincontents .shoppingguide .title_shopping .sp_title_guide {
+    margin-top: 20px;
+    margin-bottom: 17.5px; }
+  main #maincontents .shoppingguide .title_shopping .pc_title_guide {
+    display: none; }
+main #maincontents .shoppingguide .delivery,
+main #maincontents .shoppingguide .card {
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-bottom: 15px;
+  margin-bottom: 5px;
+  background-color: #ffffff; }
+  main #maincontents .shoppingguide .delivery img,
+  main #maincontents .shoppingguide .card img {
+    margin-bottom: 7px; }
+  main #maincontents .shoppingguide .delivery p,
+  main #maincontents .shoppingguide .card p {
+    font-size: 1.2rem;
+    margin-bottom: 20px; }
+  main #maincontents .shoppingguide .delivery .brown,
+  main #maincontents .shoppingguide .card .brown {
+    font-weight: bold;
+    color: #887f69;
+    margin-top: 10px;
+    margin-bottom: 13px; }
+  main #maincontents .shoppingguide .delivery .otodoke,
+  main #maincontents .shoppingguide .delivery .kessai,
+  main #maincontents .shoppingguide .card .otodoke,
+  main #maincontents .shoppingguide .card .kessai {
+    font-size: 1.6rem;
+    margin-top: 0;
+    margin-bottom: 20px; }
+
+/*メインコンテンツ PC*/
+@media (min-width: 550px) {
+  main #maincontents .owl-theme img {
+    height: 280px; }
+  main #maincontents .owl-theme .owl-dots {
+    height: 17px; }
+  main #maincontents .new_items .items_title,
+  main #maincontents .popular_items .items_title,
+  main #maincontents .list_items .items_title,
+  main #maincontents .recent_items .items_title {
+    height: 74px; }
+    main #maincontents .new_items .items_title img,
+    main #maincontents .popular_items .items_title img,
+    main #maincontents .list_items .items_title img,
+    main #maincontents .recent_items .items_title img {
+      margin: 0;
+      padding-top: 32px; }
+    main #maincontents .new_items .items_title .pc_title_items,
+    main #maincontents .popular_items .items_title .pc_title_items,
+    main #maincontents .list_items .items_title .pc_title_items,
+    main #maincontents .recent_items .items_title .pc_title_items {
+      display: block; }
+    main #maincontents .new_items .items_title .sp_title_items,
+    main #maincontents .popular_items .items_title .sp_title_items,
+    main #maincontents .list_items .items_title .sp_title_items,
+    main #maincontents .recent_items .items_title .sp_title_items {
+      display: none; }
+  main #maincontents .new_items .items .items_contents,
+  main #maincontents .popular_items .items .items_contents,
+  main #maincontents .list_items .items .items_contents,
+  main #maincontents .recent_items .items .items_contents {
+    padding: 15px;
+    margin: 2px;
+    width: calc(100% / 3 - 4px); }
+  main #maincontents .shoppingguide .title_shopping {
+    height: 74px; }
+    main #maincontents .shoppingguide .title_shopping img {
+      margin: 0;
+      padding-top: 32px; }
+    main #maincontents .shoppingguide .title_shopping .pc_title_guide {
+      display: block; }
+    main #maincontents .shoppingguide .title_shopping .sp_title_guide {
+      display: none; }
+  main #maincontents .shoppingguide .delivery_card {
+    display: flex; }
+    main #maincontents .shoppingguide .delivery_card .delivery,
+    main #maincontents .shoppingguide .delivery_card .card {
+      padding-left: 20px; }
+    main #maincontents .shoppingguide .delivery_card .delivery {
+      width: calc(100% / 2 - 2.5px);
+      margin-right: 2.5px;
+      margin-bottom: 0; }
+    main #maincontents .shoppingguide .delivery_card .card {
+      width: calc(100% / 2 - 2.5px);
+      margin-left: 2.5px;
+      margin-bottom: 0; } }
+/*list.html メインコンテンツ*/
+main #maincontents #pankuzu {
+  height: 34px;
+  background-color: #e8e4da;
+  margin-bottom: 10px;
+  border-radius: 2px; }
+  main #maincontents #pankuzu ul {
+    margin: 0;
+    height: 34px; }
+    main #maincontents #pankuzu ul li {
+      display: inline-block;
+      list-style: none;
+      font-size: 1.1rem;
+      padding: 12px 0 0 0;
+      margin: 0; }
+      main #maincontents #pankuzu ul li img {
+        padding-left: 10px;
+        padding-right: 9px; }
+      main #maincontents #pankuzu ul li span {
+        color: #abb4bf;
+        margin-right: 9px;
+        margin-left: 9px; }
+    main #maincontents #pankuzu ul a {
+      text-decoration: none;
+      color: #8b826d; }
+main #maincontents .category_name {
+  height: 85px;
+  margin-bottom: 10px; }
+  main #maincontents .category_name .sp_category_name {
+    width: 100%;
+    height: 85px; }
+  main #maincontents .category_name .pc_category_name {
+    display: none; }
+main #maincontents .list_buttons {
+  margin-top: 25px;
+  margin-bottom: 30px; }
+  main #maincontents .list_buttons ul {
+    margin: 0; }
+  main #maincontents .list_buttons li {
+    width: 120px;
+    height: 40px;
+    background-color: #887f69;
+    list-style: none;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 15px;
+    margin: 0; }
+  main #maincontents .list_buttons .back_button {
+    float: left; }
+  main #maincontents .list_buttons .next_button {
+    float: right; }
+  main #maincontents .list_buttons a {
+    text-decoration: none;
+    color: #ffffff; }
+main #maincontents .recent_items .items_title {
+  height: 35px;
+  padding-top: 20px; }
+  main #maincontents .recent_items .items_title img {
+    margin: 0; }
+
+/*list.html メインコンテンツPC*/
+@media (min-width: 550px) {
+  main #maincontents #pankuzu ul li span {
+    margin-right: 6px;
+    margin-left: 6px; }
+  main #maincontents .category_name {
+    height: 170px; }
+    main #maincontents .category_name .sp_category_name {
+      display: none;
+      height: 85px; }
+    main #maincontents .category_name .pc_category_name {
+      display: block;
+      width: 100%;
+      height: 170px;
+      margin-bottom: 10px; }
+  main #maincontents .list_buttons {
+    margin-top: 20px; }
+  main #maincontents .recent_items .items_title {
+    height: 45px; }
+    main #maincontents .recent_items .items_title img {
+      padding: 0; } }
+/*products.html メインコンテンツ*/
+main #maincontents .products_box {
+  background-color: white; }
+  main #maincontents .products_box .products_name {
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 17px;
+    margin: 0;
+    border-bottom: 1px solid #e3e8cf; }
+    main #maincontents .products_box .products_name span {
+      font-weight: normal;
+      font-size: 1.0rem;
+      color: #a6a6a6;
+      line-height: 1.0rem; }
+  main #maincontents .products_box .products_slide {
+    padding-bottom: 7px;
+    border-bottom: 1px solid #e3e8cf; }
+    main #maincontents .products_box .products_slide #list_img {
+      margin: 0; }
+      main #maincontents .products_box .products_slide #list_img li {
+        list-style: none;
+        display: inline-block;
+        width: calc(100% / 5 - 8.4px);
+        margin: 0;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-right: 2.5px;
+        padding-left: 2.5px; }
+      main #maincontents .products_box .products_slide #list_img li img {
+        cursor: pointer; }
+  main #maincontents .products_box .color_size {
+    border-bottom: 1px solid #e3e8cf; }
+    main #maincontents .products_box .color_size .products_title {
+      color: #887f69;
+      font-size: 1.4rem;
+      font-weight: bold;
+      padding-top: 15px;
+      padding-bottom: 20px; }
+    main #maincontents .products_box .color_size table {
+      width: 100%;
+      margin-bottom: 15px; }
+      main #maincontents .products_box .color_size table tr th {
+        background-color: #f9f9f5;
+        color: #887f69;
+        font-weight: normal;
+        text-align: center; }
+      main #maincontents .products_box .color_size table tr td {
+        text-align: center; }
+        main #maincontents .products_box .color_size table tr td input {
+          -webkit-appearance: none;
+          appearance: none;
+          display: inline-block;
+          width: 15px;
+          height: 15px;
+          border: 2px solid #887f69;
+          background: transparent;
+          opacity: 0.5;
+          margin: 0; }
+  main #maincontents .products_box .price {
+    border-bottom: 1px solid #e3e8cf; }
+    main #maincontents .products_box .price .products_title {
+      display: inline-block;
+      color: #887f69;
+      font-size: 1.4rem;
+      font-weight: bold;
+      padding-top: 25px;
+      padding-bottom: 25px; }
+    main #maincontents .products_box .price .price_yen {
+      display: inline-block;
+      font-size: 22px;
+      color: #e80f66;
+      margin-left: 75px; }
+      main #maincontents .products_box .price .price_yen .yen {
+        font-size: 14px; }
+      main #maincontents .products_box .price .price_yen .tax {
+        font-size: 14px;
+        color: #000000; }
+  main #maincontents .products_box .quantity {
+    border-bottom: 1px solid #e3e8cf; }
+    main #maincontents .products_box .quantity .products_title {
+      display: inline-block;
+      color: #887f69;
+      font-size: 1.4rem;
+      font-weight: bold;
+      padding-top: 25px;
+      padding-bottom: 25px; }
+    main #maincontents .products_box .quantity input {
+      display: inline-block;
+      width: 60%;
+      margin-left: 50px; }
+  main #maincontents .products_box .add_cart {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 30px; }
+  main #maincontents .products_box .products_desc_title {
+    color: #887f69;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding-bottom: 17.5px;
+    border-bottom: 1px solid #887f69; }
+  main #maincontents .products_box .products_desc {
+    padding-bottom: 30px; }
+    main #maincontents .products_box .products_desc h4 {
+      color: #887f69;
+      font-size: 1.6rem;
+      font-weight: bold;
+      margin-top: 20px;
+      margin-bottom: 20px; }
+    main #maincontents .products_box .products_desc p {
+      color: #000000;
+      font-size: 1.4rem;
+      margin-bottom: 15px; }
+    main #maincontents .products_box .products_desc table {
+      margin: 0;
+      width: 100%; }
+      main #maincontents .products_box .products_desc table tr {
+        border: 2px solid #e8e4da;
+        color: #887f69;
+        font-size: 1.2rem; }
+        main #maincontents .products_box .products_desc table tr th {
+          font-weight: normal;
+          text-align: center; }
+        main #maincontents .products_box .products_desc table tr .title {
+          width: 30%;
+          border: 2px solid #e8e4da;
+          background-color: #f9f9f5; }
+
+@media (max-width: 550px) {
+  #products main .container {
+    padding: 0; }
+    #products main .container #maincontents .products_box {
+      padding: 0 20px; }
+      #products main .container #maincontents .products_box .products_slide #display_img {
+        padding-top: 10px; }
+    #products main .container #maincontents #pankuzu,
+    #products main .container #maincontents .recent_items,
+    #products main .container #maincontents .shoppingguide {
+      margin: 0 20px; }
+    #products main .container #maincontents #pankuzu {
+      margin-bottom: 15px; }
+    #products main .container #sidemenu {
+      margin: 0 20px;
+      width: 87.5%; } }
+/*products.html メインコンテンツPC*/
+@media (min-width: 550px) {
+  main #maincontents .products_box {
+    padding-top: 20px;
+    padding-right: 60px;
+    padding-left: 60px;
+    padding-bottom: 50px; }
+    main #maincontents .products_box .products_name span {
+      float: right; }
+    main #maincontents .products_box .products_slide {
+      display: flex; }
+      main #maincontents .products_box .products_slide #display_img {
+        width: 70%;
+        margin-top: 20px;
+        margin-right: 5.5px; }
+      main #maincontents .products_box .products_slide #list_img {
+        padding-top: 17px;
+        width: 30%; }
+        main #maincontents .products_box .products_slide #list_img li {
+          width: calc(100% / 2 - 7.1px); }
+    main #maincontents .products_box .color_size {
+      border: none; }
+    main #maincontents .products_box .price_quantity {
+      width: 50%;
+      float: left; }
+      main #maincontents .products_box .price_quantity .price {
+        border-top: 1px solid #e3e8cf; }
+      main #maincontents .products_box .price_quantity .quantity input {
+        width: 50%; }
+    main #maincontents .products_box .add_cart {
+      float: right;
+      text-align: right; }
+    main #maincontents .products_box .products_desc_title {
+      padding-top: 38px; } }
+/*サイドメニュー*/
+main #sidemenu .search_box {
+  background-color: #ffffff;
+  height: 30.5px;
+  padding-top: 22px;
+  padding-bottom: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px; }
+  main #sidemenu .search_box .search {
+    text-align: center; }
+  main #sidemenu .search_box .pc_search {
+    display: none; }
+  main #sidemenu .search_box .search_engine {
+    width: 90%;
+    height: 30px;
+    border: 1px solid #eeeeee;
+    border-radius: 0px;
+    background-color: #eeeeee;
+    background-image: url("../images/top/search_icon.png");
+    background-repeat: no-repeat;
+    background-position: 95% 55%; }
+main #sidemenu .side_box {
+  width: 100%;
+  background-color: #887f69;
+  margin-bottom: 10px; }
+  main #sidemenu .side_box .side_box_bar {
+    height: 45px;
+    width: 100%;
+    background-image: url("../images/top/next_icon_gray.png");
+    background-repeat: no-repeat;
+    background-position: 95% 60%; }
+    main #sidemenu .side_box .side_box_bar .img_pagelink {
+      margin-top: 18px;
+      margin-left: 16px; }
+    main #sidemenu .side_box .side_box_bar .img_categories {
+      margin-top: 18px;
+      margin-left: 16px; }
+  main #sidemenu .side_box .side_box_li {
+    display: none;
+    background-color: #ffffff;
+    list-style: none; }
+    main #sidemenu .side_box .side_box_li li {
+      width: 100%;
+      height: 45px;
+      margin: 0;
+      border-bottom: 2px solid #f9f8f6;
+      background-image: url("../images/top/next_icon_gray.png");
+      background-repeat: no-repeat;
+      background-position: 95% 60%; }
+      main #sidemenu .side_box .side_box_li li a {
+        display: inline-block;
+        margin-left: 18px;
+        margin-top: 14px;
+        text-decoration: none;
+        color: black; }
+main #sidemenu .about,
+main #sidemenu .shopinfo {
+  background-color: #ffffff;
+  margin-bottom: 10px; }
+  main #sidemenu .about .a_s,
+  main #sidemenu .shopinfo .a_s {
+    width: 100%;
+    height: 45px;
+    background-color: #887f69; }
+  main #sidemenu .about .description,
+  main #sidemenu .shopinfo .description {
+    display: flex; }
+  main #sidemenu .about .img_text,
+  main #sidemenu .shopinfo .img_text {
+    margin-top: 18px;
+    margin-left: 16px; }
+  main #sidemenu .about .img_a_s,
+  main #sidemenu .shopinfo .img_a_s {
+    padding: 12.5px 10px 0px 10px;
+    width: 130px;
+    height: 82.5px;
+    box-sizing: content-box; }
+  main #sidemenu .about .text_a_s,
+  main #sidemenu .shopinfo .text_a_s {
+    padding: 12.5px 15px 12.5px 0; }
+    main #sidemenu .about .text_a_s p,
+    main #sidemenu .shopinfo .text_a_s p {
+      font-size: 1.2rem;
+      margin: 0; }
+
+/*サイドメニュー PC*/
+@media (min-width: 550px) {
+  main #sidemenu .search_box {
+    height: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    margin-top: 0; }
+    main #sidemenu .search_box .pc_search {
+      display: block;
+      margin-left: 10%; }
+    main #sidemenu .search_box .search {
+      margin: 0; }
+      main #sidemenu .search_box .search .search_engine {
+        width: 80%;
+        margin-top: 10px; }
+  main #sidemenu .about .description,
+  main #sidemenu .shopinfo .description {
+    display: block; }
+    main #sidemenu .about .description .img_a_s,
+    main #sidemenu .shopinfo .description .img_a_s {
+      width: 90%;
+      height: 125px;
+      padding: 12px; }
+    main #sidemenu .about .description .text_a_s,
+    main #sidemenu .shopinfo .description .text_a_s {
+      padding: 0;
+      text-align: center; }
+      main #sidemenu .about .description .text_a_s p,
+      main #sidemenu .shopinfo .description .text_a_s p {
+        text-align: left;
+        margin-left: 12px;
+        margin-right: 12px; }
+      main #sidemenu .about .description .text_a_s .more_btn,
+      main #sidemenu .shopinfo .description .text_a_s .more_btn {
+        margin-top: 20px;
+        margin-bottom: 20px; } }
+/*フッター*/
+footer .container {
+  height: 220px; }
+  footer .container .pagetop {
+    height: 10px;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 30px; }
+  footer .container .footer_li {
+    border-top: 1px solid #9f9785;
+    padding-top: 20px;
+    margin-bottom: 15px;
+    text-align: center; }
+    footer .container .footer_li li {
+      font-size: 1.1rem;
+      display: inline-block; }
+    footer .container .footer_li a {
+      text-decoration: none;
+      color: black; }
+  footer .container .copyright {
+    text-align: center;
+    color: #b8b4ac;
+    font-size: 1rem;
+    margin-bottom: 90px; }
+
+/*フッター PC*/
+@media (min-width: 550px) {
+  footer .container {
+    height: 330px; }
+    footer .container .pagetop {
+      height: 90px;
+      text-align: right;
+      margin: 0; }
+      footer .container .pagetop img {
+        padding-top: 60px; }
+    footer .container .footer_li {
+      text-align: center;
+      padding-top: 35px;
+      margin-bottom: 35px; }
+      footer .container .footer_li li {
+        font-size: 1.2rem; }
+      footer .container .footer_li span {
+        margin-right: 20px;
+        margin-left: 20px; }
+    footer .container .copyright {
+      margin-bottom: 150px; } }
+
+/*# sourceMappingURL=shopping.css.map */
