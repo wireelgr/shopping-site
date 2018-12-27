@@ -45,13 +45,16 @@ header .container {
         .sp_menu_li {
             display: none;
             background-color: #ff6d77;
+            margin: 0;
             li {
+                width: 80%;
                 height: 40px;
                 display: block;
                 border-bottom: 0.5px solid #ffffff;
                 text-align: left;
-                margin: 0;
+                margin: 0 auto;
                 padding-top: 15px;
+                padding-left: 7.5px;
             }
             a {
                 text-decoration: none;
@@ -61,12 +64,16 @@ header .container {
     }
 }
 
-
 @media (max-width: 550px) {
+    header .container {
+        padding: 0;
+    }
     .pc_menu {
         display: none;
     }
 }
+
+
 
 /*ヘッダー PC*/
 
@@ -491,8 +498,11 @@ main #maincontents {
                 display: inline-block;
                 font-size: 22px;
                 color: #e80f66;
+                font-style: italic;
                 margin-left: 75px;
                 .yen {
+                    font-style: italic;
+                    font-family: 'ＭＳ ゴシック';
                     font-size: 14px;
                 }
                 .tax {
@@ -585,7 +595,7 @@ main #maincontents {
             #pankuzu {
                 margin-bottom: 15px;
             }
-        } 
+        }
         #sidemenu {
             margin: 0 20px;
             width: 87.5%;
@@ -610,14 +620,15 @@ main #maincontents {
             .products_slide {
                 display: flex;
                 #display_img {
-                    width: 70%;
+                    width: 72%;
                     margin-top: 20px;
                     margin-right: 5.5px;
                 }
                 #list_img {
-                    padding-top: 17px;
-                    width: 30%;
+                    padding-top: 20px;
+                    width: 28%;
                     li {
+                        padding-top: 0px;
                         width: calc(100% / 2 - 7.1px);
                     }
                 }
@@ -677,6 +688,10 @@ main #sidemenu {
             background-image: url("../images/top/search_icon.png");
             background-repeat: no-repeat;
             background-position: 95% 55%;
+            font-style: italic;
+        }
+        ::placeholder {
+            color: #cecece;
         }
     }
 
@@ -698,6 +713,9 @@ main #sidemenu {
                 margin-top: 18px;
                 margin-left: 16px;
             }
+        }
+        .side_box_bar.active {
+           background-image: url("../images/top/down_icon.png"); 
         }
         .side_box_li {
             display: none;

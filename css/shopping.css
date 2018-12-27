@@ -33,19 +33,25 @@ header .container {
       margin-left: 12.5px; }
     header .container .sp_menu .sp_menu_li {
       display: none;
-      background-color: #ff6d77; }
+      background-color: #ff6d77;
+      margin: 0; }
       header .container .sp_menu .sp_menu_li li {
+        width: 80%;
         height: 40px;
         display: block;
         border-bottom: 0.5px solid #ffffff;
         text-align: left;
-        margin: 0;
-        padding-top: 15px; }
+        margin: 0 auto;
+        padding-top: 15px;
+        padding-left: 7.5px; }
       header .container .sp_menu .sp_menu_li a {
         text-decoration: none;
         color: #ffffff; }
 
 @media (max-width: 550px) {
+  header .container {
+    padding: 0; }
+
   .pc_menu {
     display: none; } }
 /*ヘッダー PC*/
@@ -383,8 +389,11 @@ main #maincontents .products_box {
       display: inline-block;
       font-size: 22px;
       color: #e80f66;
+      font-style: italic;
       margin-left: 75px; }
       main #maincontents .products_box .price .price_yen .yen {
+        font-style: italic;
+        font-family: 'ＭＳ ゴシック';
         font-size: 14px; }
       main #maincontents .products_box .price .price_yen .tax {
         font-size: 14px;
@@ -467,13 +476,14 @@ main #maincontents .products_box {
     main #maincontents .products_box .products_slide {
       display: flex; }
       main #maincontents .products_box .products_slide #display_img {
-        width: 70%;
+        width: 72%;
         margin-top: 20px;
         margin-right: 5.5px; }
       main #maincontents .products_box .products_slide #list_img {
-        padding-top: 17px;
-        width: 30%; }
+        padding-top: 20px;
+        width: 28%; }
         main #maincontents .products_box .products_slide #list_img li {
+          padding-top: 0px;
           width: calc(100% / 2 - 7.1px); }
     main #maincontents .products_box .color_size {
       border: none; }
@@ -509,7 +519,10 @@ main #sidemenu .search_box {
     background-color: #eeeeee;
     background-image: url("../images/top/search_icon.png");
     background-repeat: no-repeat;
-    background-position: 95% 55%; }
+    background-position: 95% 55%;
+    font-style: italic; }
+  main #sidemenu .search_box ::placeholder {
+    color: #cecece; }
 main #sidemenu .side_box {
   width: 100%;
   background-color: #887f69;
@@ -526,6 +539,8 @@ main #sidemenu .side_box {
     main #sidemenu .side_box .side_box_bar .img_categories {
       margin-top: 18px;
       margin-left: 16px; }
+  main #sidemenu .side_box .side_box_bar.active {
+    background-image: url("../images/top/down_icon.png"); }
   main #sidemenu .side_box .side_box_li {
     display: none;
     background-color: #ffffff;
